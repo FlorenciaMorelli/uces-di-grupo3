@@ -182,7 +182,7 @@ a:hover{
         flex-basis: 0;
 }
 
-.card{
+/* .card{
     width: 30%;
     height: auto;
     padding: 0px 10px;
@@ -195,7 +195,7 @@ a:hover{
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
-}
+} */
 
 .card img{
     width: 100%;
@@ -241,5 +241,9 @@ footer{
 }
 
 form{
+    padding: 20px;
+}
+
+#main-carrito{
     padding: 20px;
 }
