@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Estilos personalizados */
+:root {
+    --color-primario: #FF7F50;
+    --color-secundario: #FFD700;
+    --color-complementario: #5F9EA0;
+  }
+
 *{
     font-family: 'Public Sans', sans-serif;
 }
@@ -23,8 +30,6 @@ p{
 header{
     padding: 20px, 20px, 0px, 20px;
     margin: 10px, 10px, 0px, 10px;
-
-    position: sticky;
 }
 
 .header-top{
@@ -35,6 +40,13 @@ header{
     justify-content: space-evenly;
     align-self: stretch;
     align-items: center;
+    margin: none;
+    padding: none;
+}
+
+.header-bottom{
+    margin: none;
+    padding: none;
 }
 
 .header-logo{
@@ -42,7 +54,6 @@ header{
     height: 100px;
     border-radius: 50px;
 }
-
 
 .searchbar{
     width: 600px;
@@ -130,6 +141,7 @@ a:hover{
     max-height: 400px;
     width: 100%;
     overflow: hidden;
+    
 }
 
 .promociones img {
@@ -201,4 +213,29 @@ a:hover{
 footer{
     background-color: #5F9EA0;
     padding: 10px;
+}
+
+
+/* Estilos de la página de resultados de categoría */
+.resultados-busqueda{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    padding: 10px;
+}
+
+.filtros{
+    max-width: 30%;
+}
+
+.resultados{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.resultados .card{
+    flex-basis: 30%;
 }
