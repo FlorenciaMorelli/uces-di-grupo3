@@ -55,6 +55,11 @@ header{
     border-radius: 50px;
 }
 
+#logo{
+    width: 130%;
+    height: auto;
+}
+
 .searchbar{
     width: 600px;
     height: 40px;
