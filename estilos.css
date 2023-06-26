@@ -239,3 +239,7 @@ footer{
 .resultados .card{
     flex-basis: 30%;
 }
+
+form{
+    padding: 20px;
+}
