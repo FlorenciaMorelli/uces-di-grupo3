@@ -139,7 +139,7 @@ a:hover{
 
 
 /* Estilos de la sección de promociones */
-.promociones {
+/* .promociones {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +152,7 @@ a:hover{
 .promociones img {
     width: 100%;
     height: auto;
-}
+} */
 
 /* Estilos de la sección de productos */
 .inicio-productos{
