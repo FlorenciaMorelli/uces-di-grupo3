@@ -269,6 +269,10 @@ form{
     align-items: center;
     }
 
+    .card {
+    width: 100%;
+    }
+
     .brand {
     height: 30px;
     width: auto;
