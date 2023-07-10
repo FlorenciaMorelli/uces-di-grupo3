@@ -33,6 +33,3 @@ Prototipo en alta
 
 Muestra visual en Netlify
 https://chic-torte-b81f84.netlify.app/
-
-Tablero de Trello utilizado para la organización grupal
-https://chic-torte-b81f84.netlify.app/
