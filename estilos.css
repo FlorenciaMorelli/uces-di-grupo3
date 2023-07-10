@@ -161,8 +161,8 @@ a:hover{
 
     flex: 1 0 0;
     flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
+    flex-shrink: 1;
+    flex-basis: 0;
 }
 
 .card{
@@ -308,7 +308,7 @@ form{
     .informacion{
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 5px;
         justify-content: center;
         justify-items: stretch;
         align-content: center;
@@ -325,8 +325,22 @@ form{
     padding: 20px;
     }
 
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    
+        flex: 1 0 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
     .card {
-    width: 45%;
+        width: 45%;
+        height: auto;
     }
 
     .brand {
@@ -347,10 +361,10 @@ form{
     height: 120px;
     }
 
-    .searchbar {
+    /* .searchbar {
     width: 100%;
     max-width: 600px;
-    }
+    } */
 
     nav a {
     padding: 15px 35px;
@@ -362,6 +376,24 @@ form{
 
     .inicio-productos {
     padding: 30px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    
+        flex: 1 0 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
+    .card {
+        width: 45%;
+        height: auto;
     }
 
     .brand {
