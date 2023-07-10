@@ -56,37 +56,37 @@
                             <button class="btn btn-outline-dark" type="submit">Buscar</button>
                         </form><!-- class="d-flex" -->
                     </div><!-- class="container-fluid" -->
-                    <div class="accordion accordion-flush" id="accordionFlushExample"> <!-- Acordión -->
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Categorías
-                                </button><!-- class="accordion-button collapsed" -->
-                            </h2><!-- class="accordion-header" -->
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <span class="badge text-bg-dark" style="cursor: pointer;">Bagley <i class="bi bi-x-circle"></i></span></h5>
-                                    <span class="badge text-bg-dark" style="cursor: pointer;">Georgalos <i class="bi bi-x-circle"></i></span></h5>
-                                    <span class="badge text-bg-light" style="cursor: pointer;">Mondeléz <i class="bi bi-x-circle"></i></span></h5>
-                                    <span class="badge text-bg-dark" style="cursor: pointer;">Arcor <i class="bi bi-x-circle"></i></span></h5>
-                                </div><!-- class="accordion-body" -->
-                            </div><!-- id="flush-collapseOne" -->
-                        </div><!-- class="accordion-item" -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Categorías
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            <span class="badge text-bg-dark" style="cursor: pointer;">Azucaradas <i class="bi bi-x-circle"></i></span>
+                            <span class="badge text-bg-dark" style="cursor: pointer;">Dietéticas <i class="bi bi-x-circle"></i></span>
+                            <span class="badge text-bg-dark" style="cursor: pointer;">Agua <i class="bi bi-x-circle"></i></span>
+                            <span class="badge text-bg-light" style="cursor: pointer;">Gaseosas <i class="bi bi-x-circle"></i></span>
+                            </div>
+                        </div>
+                        </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Marcas
-                                </button><!-- class="accordion-button collapsed" -->
-                            </h2><!-- class="accordion-header" -->
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <span class="badge text-bg-light" style="cursor: pointer;">Coca-Cola <i class="bi bi-x-circle"></i></span></h5>
-                                    <span class="badge text-bg-light" style="cursor: pointer;">Pepsi <i class="bi bi-x-circle"></i></span></h5>
-                                    <span class="badge text-bg-light" style="cursor: pointer;">Baggio <i class="bi bi-x-circle"></i></span></h5>
-                                </div> <!-- class="accordion-body" -->
-                            </div> <!-- id="flush-collapseTwo" -->
-                        </div><!-- class="accordion-item" -->
-                    </div><!-- id="accordionFlushExample" -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Marcas
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            <span class="badge text-bg-light" style="cursor: pointer;">Coca-Cola <i class="bi bi-x-circle"></i></span>
+                            <span class="badge text-bg-light" style="cursor: pointer;">Pepsi <i class="bi bi-x-circle"></i></span>
+                            <span class="badge text-bg-light" style="cursor: pointer;">Baggio <i class="bi bi-x-circle"></i></span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
             </div><!-- class="row" -->
         </div><!-- class="filtros" -->
 
@@ -187,5 +187,45 @@
                 Dev by Morelli Florencia.
             </p>
         </footer>
+
+
+        <script>
+            const badges = document.querySelectorAll('.badge');
+        
+            // Evento de clic a cada badge
+            badges.forEach((badge) => {
+            badge.addEventListener('click', function() {
+                // Cambiar el estado del badge seleccionado
+                this.classList.toggle('text-bg-dark');
+                this.classList.toggle('text-bg-light');
+        
+                // Mover el badge seleccionado al principio
+                const parent = this.parentNode;
+                if (this.classList.contains('text-bg-dark')) {
+                parent.prepend(this);
+                } else {
+                const firstDarkBadge = parent.querySelector('.text-bg-dark');
+                parent.insertBefore(this, firstDarkBadge.nextSibling);
+                }
+            });
+            });
+        
+            // Acordeón
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+        
+            // Evento de clic al botón del acordeón
+            accordionButtons.forEach((button) => {
+            button.addEventListener('click', function() {
+                // Elemento que se quiere mostrar u ocultar
+                const target = document.querySelector(this.getAttribute('data-bs-target'));
+        
+                // Cambiar el estado del botón y del elemento objetivo
+                this.classList.toggle('collapsed');
+                target.classList.toggle('show');
+            });
+            });
+        </script>
+
+
     </body>
     </html>
